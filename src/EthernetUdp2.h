@@ -59,6 +59,7 @@ private:
 public:
   EthernetUDP();  // Constructor
   virtual uint8_t begin(uint16_t);	// initialize, start listening on specified port. Returns 1 if successful, 0 if there are no sockets available to use
+  virtual uint8_t beginMulticast(IPAddress ip, uint16_t port); // initializer for multicast sockets
   virtual void stop();  // Finish with the UDP socket
 
   // Sending UDP packets
